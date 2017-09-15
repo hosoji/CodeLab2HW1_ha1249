@@ -8,7 +8,9 @@ public class AddColor : MonoBehaviour {
 
 	public GameObject GenerateRandomBall(){
 
-		return balls [Random.Range (0, balls.Length)];
+		GameObject ball = Instantiate (balls [Random.Range (0, balls.Length)], transform.position, Quaternion.identity);
+
+		return ball;
 	}
 
 

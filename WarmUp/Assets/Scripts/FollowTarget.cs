@@ -5,18 +5,13 @@ using UnityEngine;
 public class FollowTarget : MonoBehaviour {
 
 	public Transform target;
-	public float speed = 3;
+	float speed = 10f;
 
 
 	void Update () {
 		
-		Vector3 dir = target.position - transform.position;
-
 		Vector3 offset = new Vector3 (target.position.x , target.position.y - 1f, target.position.z);
-
 		Vector3 dirOffset = offset - transform.position;
-
-
 		transform.position += dirOffset * speed * Time.deltaTime;
 
 	}
