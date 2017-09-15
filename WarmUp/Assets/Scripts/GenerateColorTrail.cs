@@ -35,6 +35,7 @@ public class GenerateColorTrail : MonoBehaviour {
 				if (hit.transform.tag == "Ball") {
 					hit.transform.gameObject.GetComponent<Rigidbody> ().isKinematic = true;
 					hit.transform.gameObject.AddComponent<FollowTarget> ();
+//					hit.transform.gameObject.GetComponent<SphereCollider> ().enabled = false;
 					body.Add (hit.transform.gameObject);
 
 //					Debug.Log ("Contact made");

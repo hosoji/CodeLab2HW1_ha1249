@@ -10,8 +10,10 @@ public class FollowTarget : MonoBehaviour {
 
 	void Update () {
 		
-		Vector3 offset = new Vector3 (target.position.x , target.position.y - 1f, target.position.z);
-		Vector3 dirOffset = offset - transform.position;
+//		Vector3 offset = new Vector3 (target.position.x , target.position.y - 1f, target.position.z);
+
+		Vector3 dir = GetComponent<Ball> ().Direction(target.position);
+		Vector3 dirOffset = dir - transform.position;
 		transform.position += dirOffset * speed * Time.deltaTime;
 
 	}

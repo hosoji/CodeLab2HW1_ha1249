@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		InvokeRepeating ("SpriteTime", 1, 1);
+//		InvokeRepeating ("SpriteTime", 1, 1);
 	}
 	
 	// Update is called once per frame
@@ -23,9 +23,9 @@ public class Spawner : MonoBehaviour {
 
 		goSprite.AddComponent<Rigidbody2D> ();
 	}
-
-	void SpriteTime(){
-		int nextNum = GetComponent<NumberGenerator> ().Next ();
-		MakeSprite (nextNum);
-	}
+//
+//	void SpriteTime(){
+//		int nextNum = GetComponent<NumberGenerator> ().Next ();
+//		MakeSprite (nextNum);
+//	}
 }
